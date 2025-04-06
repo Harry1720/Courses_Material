@@ -1,0 +1,43 @@
+cửa sổ vàng: chạy theo từng bước
+chạy tới đâu highlight code tới đó.
+
+cửa sổ đỏ: chứa mã lệnh
+
+0700
+0100: vị trí dòng lệnh đầu tiên
+
+lệnh: xanh dương
+
+Mov
+REG (register), memory (vị trí nào đó thuộc bộ nhớ chính)
+immediate (gõ hằng số vào)
+
+thanh ghi đa dụng (16 bit)
+AX - the accumulator register (divided into AH / AL).
+Tác động dữ liệu trên cả 2 thanh ghi AH, AL.
+BX - the base address register (divided into BH / BL).
+CX - the count register (divided into CH / CL).
+DX - the data register (divided into DH / DL).
+chữ X: làm việc với từng byte riêng biệt
+SI - source index register.
+DI - destination index register.
+BP - base pointer.
+SP - stack pointer.
+
+Cờ
+overflow: cờ tràn
+ADD cộng 2 giá trị lại với nhau
+nếu giá trị >16 bit (VD 17 -> bật cờ lên 1)
+
+3b,3o, ... b=binary, o=octa
+3: hệ thập phân
+-> AH: 8 số 0 -> Thập lục phân: 00H.
+-> 
+
+int 10h: dẹp tất cả cv đang thực thi vào stack, vào vùng ngắt thực hiện.
+INT 10h/00h: sau / là AH (2 chữ số) hoặc AX (4 chữ số)
+
+
+segment registers: thanh ghi phân đoạn: mỗi đoạn lưu trữ chtr, phần này báo cho máy biết muốn lấy code chỗ nào.
+
+1230
