@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            border: 5px groove darkmagenta;
+            width: 500px;
+            background-color: #FFCCCC;
+        }
+        
+        table,
+        td,
+        tr {
+            width: 100%;
+            border: 2px solid #C49191;
+            border-collapse: collapse;
+            padding: 5px 35px 5px 5px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        input,
+        select {
+            margin-left: 15px;
+            position: relative;
+            background-color: #006699;
+            color: #99FF33;
+            border: 1px solid #C49191;
+        }
+        
+        input[type="input"],
+        [type="password"],
+        [type="file"],
+        select {
+            width: 270px;
+            margin-left: 15px;
+        }
+        
+        textarea {
+            resize: none;
+            margin: 0 14px 0 15px;
+            background-color: #006699;
+            color: #99FF33;
+            font-family: 'Courier New', Courier, monospace;
+            border: 1px solid #C49191;
+        }
+        
+        #footer {
+            margin-left: 180px;
+        }
+        
+        #footer button {
+            border: 2px solid #23507F;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        h3 {
+            margin-left: 80px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #1554BB;
+        }
+        
+        #left-col {
+            color: #1554BB;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>ĐĂNG KÝ THÀNH VIÊN CLB YÊU NHẠC</h3>
+    <form>
+        <table>
+            <TR>
+                <TD id="left-col">Họ tên </TD>
+                <TD><input type="input" name="HoTen" /></TD>
+            </TR>
+            <TR>
+                <TD id="left-col">Tên đăng nhập</TD>
+                <TD><input type="input" name="TenDangNhap" /></TD>
+            </TR>
+            <tr>
+                <td id="left-col">Mật khẩu</td>
+                <td><input type="password" name="MatKhau" /></td>
+            </tr>
+            <tr>
+                <td id="left-col">Gõ lại mật khẩu</td>
+                <td><input type="password" name="MatKhauLai" /></td>
+            </tr>
+            <tr>
+                <td id="left-col">Phái</td>
+                <td><input type="radio" name="Phai" value="false" />Nam <input type="radio" name="Phai" value="true" />Nữ</td>
+            </tr>
+            <tr>
+                <td id="left-col">Ngoại ngữ</td>
+                <td><input type="checkbox" name="NNAnh" value="Anh" />Anh<input type="checkbox" name="NNPhap" value="Phap" />Pháp<input type="checkbox" name="NNHoa" value="Hoa" />Hoa</td>
+            </tr>
+            <tr>
+                <td id="left-col">Nghề nghiệp</td>
+                <td>
+                    <select name="NgheNghiep">
+                    <option value ="HSSV" selected = "true">Học sinh - Sinh viên</option>
+                    <option value="GV">Giảng viên</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td id="left-col">Hình</td>
+                <td>
+                    <input type="file" name="file-upload" accept="image/*" /> </label>
+                </td>
+            </tr>
+            <tr>
+                <td id="left-col">Sở thích</td>
+                <td><textarea name="SoThich" rows="6" cols="32"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div id="footer">
+                        <button value="DangKy" type="submit">Đăng ký</button>
+                        <button value="LamLai" type="reset">Làm lại</button>
+
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+
+</html>

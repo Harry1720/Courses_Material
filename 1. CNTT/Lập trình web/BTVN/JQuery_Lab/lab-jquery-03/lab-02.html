@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 02</title>
+    <style>
+        .hightlight { color: #900; background-color: #9C0; }
+        .hang{ cursor: pointer; }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+
+
+</head>
+<body>
+    <form id = "form1" name ="form1" method="post" action="loaitin_them.php">
+        <table id = "dstin" align="center" border="1" cellpadding="4" cellspacing="0" width="600">
+            <!-- Thêm tính năng xóa & chỉnh sửa dữ liệu tất cả các checkbox được chọn, thêm loại tin -->
+            <tr>
+                <td colspan="5" Align="left">
+                    <input name="xoahet" id="xoahet" value="Xoá " type="button">
+                    <input name="chinhhet" id="chinhhet" value="Chỉnh" type="button">
+
+                </td>
+                
+                <td Align="center"><a href="loaitin_them.php">Thêm loại tin</a></td>
+                
+                <td Align="right">
+                    <select name="cbothemnhieu" id="cbothemnhieu">
+                        <option value="1">1</option>
+                        <option selected="selected" value="2">2</option>  <!-- selected="selected" để đặt giá trị mặc định cho thẻ seclect -->
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <input name="btnthemnhieu" id="btnthemnhieu" value="Thêm" type="button">
+                </td>
+            </tr>
+
+            <tr class = "hang">
+                <th align="left"><input id = "chonhet" type="checkbox"/></th>
+                <th>idLT</th>
+                <th>Tên loại tin</th>
+                <th>Ẩn hiện</th>
+                <th>Thứ tự</th>
+                <th>Thể loại</th>
+                <th>Action</th>
+            </tr>
+            <tr class = "hang">
+                <td><input name = "chon" id = "chon" value="3" class="chon" type="checkbox"/></td>
+                <td>3</td>
+                <td>Du lịch</td>
+                <td width="100">Đang hiện</td>
+                <td>2</td>
+                <td><a href="theloai_xemds.php">Tin xã hội</a></td>
+                <td Align="center" width="100">
+                    <a href="loaitin_chinh.php?idLT=3">Chỉnh</a>
+                    <a href="loaitin_xoa.php?idLT=3" onclick="return confirm('Xóa hả');">Xoá</a> 
+                </td> 
+            </tr>
+            <tr class="hang">
+                <td><input name="chon" id="chon" value="9" class="chon" type="checkbox"></td>
+                <td>9</td>
+                <td>Xã hội</td>
+                <td width="100">Đang hiện</td>
+                <td>3</td>
+                <td><a href="theloai_xemds.php">Tin xã hội</a></td>
+                <td Align="center" width="100">
+                    <a href="loaitin_chinh.php?idLT=9">Chỉnh</a>
+                    <a href="loaitin_xoa.php?idLT=9" onclick="return confirm('Xoá hả');">Xoá</a> 
+                </td> 
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    $ (document).ready (function () {
+        //đưa con trỏ vào đổi màu nền, màu chữ.
+        //một phần tử có thể có nhiều class cùng lúc. <tr class="hang highlight">...</tr>
+        $ (".hang") .mouseover (function () {
+            $ (this) .addClass ('hightlight');
+        }); 
+
+        $ (".hang") .mouseout (function () {
+            $ (this) .removeClass ('hightlight');
+        });
+
+        $('#chonhet').click(function() {
+            //Nhấn checkbox có id = chonhet thì tất cả các checkbox có name = chon cũng sẽ được tick theo.                
+            var status = this.checked; //this đang mang đối tượng có id = chonhet, The checked property sets or returns the checked STATE of a checkbox.
+            //Nếu ô chonhet đang được ticked, status sẽ mang giá trị là ticked, và ngược lại
+            $('input[name=chon]').each(function() {
+                this.checked = status; //gán giá trị của status cho từng phần tử input mang name = chon, nếu ô chonhet có trạng thái như thế nào thì mỗi ô 
+                //name = chon cũng sẽ có giá trị y như vậy.
+                //Ngoài ra có thể ghi $('[name=chon]').each(function() {}); miễn là có ngoặc vuông & không có element nào khác có name như vậy.
+                //The each() method specifies (chỉ định) a function to run for each matched element.
+            });
+        });
+        
+        //Nút chỉnh
+        $ ('#chinhhet').click (function () { //Nhấn vào tickbox chinhhet
+            var listid=""; //khởi tạo chuỗi listid
+            $ ('input[name=chon]').each (function () { //Lấy từng element input có name=chon
+                if (this.checked){//Nếu tickbox có name=chon có state checked = true
+                    listid += ','+ this.value; //Nối vào chuỗi listid giá trị của value thuộc thẻ input.
+                }  
+            });
+            console.log(listid); //In ra màn hình console (F12) chuỗi listid
+            window.location="chinh.php?listid="+listid;
+            //chuyển hướng người dùng đến trang "chinh.php", kèm theo tham số listid trong URL.
+        });
+
+        //xoa
+        $ ('#xoahet') .click (function () {
+            var listid = "";
+            console.log(listid);
+            $('input[name=chon]').each(function() {
+                if (this. checked == true){ //hoặc viết như hàm chỉnh vẫn được
+                    listid=listid+','+this. value;
+                }
+            });
+            //lấy một phần của chuỗi từ vị trí chỉ định
+            listid=listid.substr(1);
+            //string.substr(start, length);
+            /*  start: Vị trí bắt đầu để lấy chuỗi con (chỉ mục đầu tiên là 0).
+                length (tùy chọn): Độ dài của chuỗi con cần lấy.
+                listid là ",3,9", việc dùng listid.substr(1) sẽ trả về "3,9" (loại bỏ dấu phẩy đầu)*/
+            window.location="xoa.php?listid="+listid;  
+            //chuyển hướng người dùng đến trang "xoa.php", kèm theo tham số listid trong URL.
+        });
+    });
+
+</script>
+</html>

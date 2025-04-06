@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab_Jquery_01</title>
+    <style type="text/css">
+        #menu{
+            width: 180px;
+            background-color: #cc6;
+        }
+        #menu .theloai{
+            background-color: #F63;
+            color: #FFFFFF;
+            display: block;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-weight: bold;
+        }
+        #menu a{
+            color: #990000;
+            padding: 3px 0 3px 15px;
+            display: block;
+            border-bottom: solid 1px #cf0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #menu a:hover{
+            color:#FF3300;
+        }
+    </style>
+    <script src = "jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id = "menu">
+        <div>
+            <div class = "theloai">Tin xã hội</div>
+            <div class = "loaitin">
+                <a href="#">Thể thao</a>
+                <a href="#">Du lịch</a>
+                <a href="#">Xã hội</a>
+                <a href="#">Sức khỏe</a>
+                <a href="#">Âm nhạc</a>
+            </div>
+        </div>
+        <div>
+            <div class="theloai">Thế giới web</div>
+            <div class="loaitin">
+                <a href="#">Tools</a>
+                <a href="#">Links</a>
+                <a href="#">Template</a>
+                <a href="#">Document</a>
+            </div>
+        </div>
+    
+        <div>
+            <div class="theloai">Nghệ thuật sống</div>
+            <div class="loaitin">
+                <a href="#">Sống đẹp</a>
+            </div>
+        </div>
+    
+        <div>
+            <div class="theloai">Thư giãn</div>
+            <div class="loaitin">
+                <a href="#">Thơ hay</a>
+                <a href="#">Đố vui</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            // $(".loaitin a").css({"color": "blue", "font-style": "italic"});
+
+            // $(".loaitin").css(
+            //     "font-size","200%"
+            // );
+
+            // $(".theloai").click(function(){
+            //     var size = $(".loaitin").css("font-size");
+            //     size = parseInt(size);
+            //     size=size+2;
+            //     size=size+"px";
+            //     $(".loaitin").css("font-size",size);
+            // });
+
+            // $(".theloai").click(function(){
+            //     //alert(a);
+            //     $(".loaitin").hide(1000);
+            //     $(".loaitin").show(1000);
+            // });
+
+            // $(".theloai").click(function(){
+            //     //alert(a);
+            //     $(".loaitin").slideToggle(1000);
+            // });            
+        })
+    </script>
+
+</body>
+</html>

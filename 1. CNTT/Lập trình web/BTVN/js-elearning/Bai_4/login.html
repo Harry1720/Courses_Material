@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script type="text/javascript" src="checklogin.js"></script>
+</head>
+
+
+<body>
+    <form onsubmit="return checklogin();" id="flogin" name="flogin" method="post" action="xulylogin.html">
+        Username: <br/> <input name="u" id="u" type="text" /> <br/> Password: <br/> <input name="p" id="p" type="password" /> <br/>
+        <input type="submit" name="sub" id="sub" value="Login" />
+    </form>
+
+    <script type="text/javascript">
+        function tg() {
+            var currentTime = new Date();
+            var month = currentTime.getMonth() + 1;
+            var day = currentTime.getDate();
+            var year = currentTime.getFullYear();
+            var hour = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            var seconds = currentTime.getSeconds();
+            document.getElementById("dongho").innerHTML = day + "/" + month + "/" + year + " " + hour + ":" + minutes + ":" + seconds;
+        }
+        setInterval("tg()", 1000);
+    </script>
+    <span id="dongho"></span>
+</body>
+
+</html>
