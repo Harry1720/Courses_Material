@@ -1,0 +1,27 @@
+CRM - quản lý khtn
+
+
+-> dựa vào đây để chăm sóc kh tốt hơn 
+- làm 1 quản lý shop cụ thể (tech)
+1. Quản lý khtnang (-> cụ thể , đặt luật như shopee -> thường mua hàng > 500000k/ tuần ) 
+-> xếp vào bảng vàng, bạc, kim cương, v.v
+
+2. Quản lý thông tin khách hàng như tên đăng nhập, mật khẩu, họ và tên, số điện thoại, email, mạng xã hội, v.v
+-> phải đảm bảo tính bảo mật, thông tin này sẽ được lưu trữ và xử lý ntn?
+
+3. Quản lý thông tin giao dịch (lưu thông tin của giao dịch: thông tin hoá đơn, thông tin giao hàng)
+-> báo cáo tài chính (cuối quý - thường là 3 tháng một lần)
+
+4. Tiếp thị sản phẩm (truy xuất thông tin của khách hàng tiềm năng từ đó đưa ra các gợi ý về khuyến mãi, sản phẩm có quan tâm) -> gửi các thông tin này qua email, mạng xã hội, chạy quảng cáo, tiếp thị liên kết, v.v
+-> khtn - mua nhiều lần-> sau đó đưa kh vào mục sẽ đề xuất
+
+5. Tương tác và hỗ trợ khách hàng (sử dụng chat, email, mạng xã hội để giao tiếp với khách hàng)
+-> nhận khiếu nại và phản hồi về sản phẩm, nhận yêu cầu cho các tính năng mới
+
+Sử dụng cho các đối tượng trong use case dưới đây
+-> cấp quyền truy cập (quản lý CRM - kế toán - sale - marketing - ban chăm sóc)
+
+6. Dựng biểu đồ và đưa ra phân tích dựa trên số liệu
+I. dash board trình bày 
+1. khtnang  (sum > 500)
+2. khach mua hang hien nay
