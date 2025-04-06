@@ -1,0 +1,33 @@
+BB2(config)#int  fa0/0
+BB2(config-if)#no ip  address
+
+BB2(config-subif)#int  fa0/0.1
+BB2(config-subif)#encapsulation  dot1q 1
+BB2(config-subif)#ip  address  172.91.9.1  255.255.255.0
+
+BB2(config-subif)#int  fa0/0.40
+BB2(config-subif)#encapsulation  dot1q 40
+BB2(config-subif)#ip  address  192.168.10.1  255.255.255.0
+
+BB2(config-subif)#int  fa0/0.50
+BB2(config-subif)#encapsulation  dot1q 50
+BB2(config-subif)#ip  address  192.168.20.1  255.255.255.0
+
+BB2(config-subif)#int  fa0/0.60
+BB2(config-subif)#encapsulation  dot1q 60
+BB2(config-subif)#ip  address  192.168.30.1  255.255.255.0
+
+BB2(config-subif)#int  fa0/0.70
+BB2(config-subif)#encapsulation  dot1q 70
+BB2(config-subif)#ip  address  192.168.40.1  255.255.255.0
+
+
+access-list 100 deny tcp host 172.90.x.200 host 30.20.x.100 eq 80
+access-list 100 permit ip any any
+interface [interface-name]
+ip access-group 100 out
+
+deny tcp host 172.90.X.200 host 50.40.X.2 eq 23
+deny tcp host 172.90.X.200 host 50.40.X.2 eq 22
+permit ip any any
+int s0/0/0 -> ip access-group BLOCK_REMOTE_SERVER out
