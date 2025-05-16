@@ -1,0 +1,150 @@
+Câu 1:
+a/
+create view kh2023 as
+select A.MAKH, A.TENKH, A.DIACHI, A.DIENTHOAI
+from KHACHHANG A, DONDATHANG B
+where A.MAKH = B.MAKH
+and DATEPART(YEAR, NGAYDH) = ‘2023’
+
+b/
+create proc sp_Lapdonhang
+@MADDH VARCHAR(10),
+	@NGAYDH DATE,
+	@MAKH VARCHAR(10),
+	@TINHTRANG VARCHAR(20),
+	@CHITIETDONHANG AS TABLE (MASP VARCHAR(10), SL INT) READONLY
+
+AS
+BEGIN TRANSACTION
+	BEGIN TRY
+		INSERT INTO DONDATHANG(MADDH, NGAYDH, MAKH, TINHTRANG)
+		VALUES (@MADDH, @NGAYDH, @MAKH, @TINHTRANG)
+		
+		INSERT INTO CHITIETDATHANG(MADDH, MASP, SL)
+		VALUES (@MADDH, SELECT MASP, SL FROM CHITIETDONHANG)
+
+		-- Cập nhật số lượng còn lại trong bảng SANPHAM
+        UPDATE SP
+        SET SLCON = SP.SLCON - CT.SL
+        FROM SANPHAM SP
+        JOIN @ChiTietDonHang CT ON SP.MASP = CT.MASP
+COMMIT TRANSACTION
+	END TRY
+	    BEGIN CATCH
+        IF (@@error <> 0)
+	BEGIN
+            	ROLLBACK TRANSACTION
+RETURN 
+END 
+END CATCH 
+
+Câu 2:
+-- a) Gửi tiền
+CREATE PROCEDURE GuiTien (
+    @MATK VARCHAR(20),
+    @SOTIEN FLOAT
+)
+AS
+    BEGIN TRANSACTION
+
+    BEGIN TRY
+        -- Cập nhật số dư tài khoản
+        UPDATE TAIKHOAN
+        SET SODU = SODU + @SOTIEN, SODUCO = SODUCO + @SOTIEN
+        WHERE MATK = @MATK
+
+        -- Thêm giao dịch vào bảng GIAODICH
+        INSERT INTO GIAODICH (NGAYGD, TKCO, SOTIEN)
+        VALUES (GETDATE(), @MATK, @SOTIEN)
+
+        COMMIT TRANSACTION
+    END TRY
+    BEGIN CATCH
+        IF (@@error <> 0)
+	begin
+          		ROLLBACK TRANSACTION
+        		RETURN
+	end
+    END CATCH
+
+-- b) Rút tiền
+CREATE PROCEDURE RutTien (
+    @MATK VARCHAR(10),
+    @SOTIEN FLOAT
+)
+AS
+    BEGIN TRANSACTION
+
+    BEGIN TRY
+        -- Kiểm tra số dư trước khi rút
+        IF (SELECT SODU FROM TAIKHOAN WHERE MATK = @MATK) >= @SOTIEN
+        BEGIN
+            -- Cập nhật số dư tài khoản
+            UPDATE TAIKHOAN
+            SET SODU = SODU - @SOTIEN, SODUNO = SODUNO + @SOTIEN
+            WHERE MATK = @MATK
+
+            -- Thêm giao dịch vào bảng GIAODICH
+            INSERT INTO GIAODICH (NGAYGD, TKNO, SOTIEN)
+            VALUES (GETDATE(), @MATK, @SOTIEN)
+
+            COMMIT TRANSACTION
+        END
+        ELSE
+        BEGIN
+            -- Nếu số dư không đủ, rollback transaction và thông báo lỗi
+            ROLLBACK TRANSACTION;
+            THROW 50001, 'Số dư không đủ để thực hiện giao dịch', 1;
+        END
+    END TRY
+    BEGIN CATCH
+        IF (@@error <> 0)
+Begin
+            	ROLLBACK TRANSACTION
+        		RETURN
+	end
+    END CATCH
+
+-- c) Chuyển tiền
+CREATE PROCEDURE ChuyenTien (
+    @MATK_NO VARCHAR(10),
+    @MATK_CO VARCHAR(10),
+    @SOTIEN DECIMAL(18,2)
+)
+AS
+    BEGIN TRANSACTION
+
+    BEGIN TRY
+        -- Kiểm tra số dư tài khoản nguồn
+        IF (SELECT SODU FROM TAIKHOAN WHERE MATK = @MATK_NO) >= @SOTIEN
+        BEGIN
+            -- Cập nhật số dư tài khoản nguồn
+            UPDATE TAIKHOAN
+            SET SODU = SODU - @SOTIEN, SODUNO = SODUNO + @SOTIEN
+            WHERE MATK = @MATK_NO
+
+            -- Cập nhật số dư tài khoản đích
+            UPDATE TAIKHOAN
+            SET SODU = SODU + @SOTIEN, SODUCO = SODUCO + @SOTIEN
+            WHERE MATK = @MATK_CO
+
+            -- Thêm giao dịch vào bảng GIAODICH
+            INSERT INTO GIAODICH (NGAYGD, TKNO, TKCO, SOTIEN)
+            VALUES (GETDATE(), @MATK_NO, @MATK_CO, @SOTIEN)
+
+            COMMIT TRANSACTION
+        END
+        ELSE
+        BEGIN
+            -- Nếu số dư không đủ, rollback transaction và thông báo lỗi
+            ROLLBACK TRANSACTION;
+            THROW 50001, 'Số dư không đủ để thực hiện giao dịch', 1;
+        END
+    END TRY
+    BEGIN CATCH
+        IF (@@error <> 0)
+	begin
+   	    ROLLBACK TRANSACTION
+    	    RETURN
+	end
+    END CATCH
