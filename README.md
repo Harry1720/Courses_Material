@@ -26,6 +26,7 @@
 - [x] Lập trình hướng đối tượng - OOP  
 - [x] Lập trình Java core  
 - [x] Lập trình mạng
+- [x] Lập trình ứng dụng di động 
 - [x] Lập trình web  
 - [x] Mạng máy tính cơ bản  
 - [x] Mạng máy tính nâng cao  
@@ -34,6 +35,7 @@
 - [x] Phân tích thiết kế hệ thống  
 - [x] Thiết kế cơ sở dữ liệu  
 - [x] Thiết kế mạng
+- [x] Xử lý ảnh & thị giác máy tính 
 (Còn nữa...)
 
 ## 2. Các môn về chính trị, pháp luật.
@@ -53,7 +55,8 @@
 - [x] Kỹ thuật viết và trình bày (Kỹ năng mềm 3)  
 - [x] Quân sự  
 - [x] Quản trị doanh nghiệp CNTT  
-- [x] Quản trị dự án CNTT  
+- [x] Quản trị dự án CNTT
+- [x] Quản trị dự án phần mềm 
 - [x] Tin học cơ bản
 (Còn nữa...)
 
