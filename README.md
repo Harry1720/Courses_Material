@@ -48,6 +48,7 @@
 - [x] Giải tích 1
 - [x] Toán chuyên đề 1 (Xác suất và thống kê)
 - [x] Đại số tuyến tính
+- [x] Tối ưu hóa
 
 ## 4. Các môn về quản trị, kỹ năng mềm, quân sự.
 - [x] Kỹ thuật viết và trình bày (Kỹ năng mềm 3)  
