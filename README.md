@@ -64,6 +64,7 @@
 ## Ngoài ra còn có các file như sau:
 - [x] Hướng dẫn trình bày bài tập lớn (gồm cách trình bày file báo cáo, căn chỉnh văn bản...).
 - [x] Theme Powerpoint UTH.
+- [x] Hướng dẫn chi tiết trình bày luận văn.
 ***
 ## Các trang web học tập cần sử dụng của Trường:
 - [https://daotao.ut.edu.vn/](https://daotao.ut.edu.vn/) - Xem thông báo của Phòng Đào tạo (Đăng ký học phần, tạm hoãn nghĩa vụ...).
