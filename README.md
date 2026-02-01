@@ -21,6 +21,7 @@
 - Chuyên đề thực tế 1
 - Cơ sở dữ liệu  
 - Công nghệ phần mềm  
+- Điện toán đám mây
 - Hệ điều hành - OS  
 - Hệ quản trị cơ sở dữ liệu  
 - Kiểm chứng phần mềm  
@@ -38,6 +39,7 @@
 - Phân tích thiết kế hệ thống  
 - Thiết kế cơ sở dữ liệu  
 - Thiết kế mạng
+- Xây dựng hệ thống thông tin quản lý (C#)
 - Xử lý ảnh & thị giác máy tính 
 - *(Còn nữa...)*
 
@@ -48,6 +50,7 @@
 - Chủ nghĩa xã hội khoa học  
 - Tư tưởng Hồ Chí Minh  
 - Lịch sử Đảng Cộng sản Việt Nam
+- Luật Công nghệ thông tin
 
 ## 3. Các môn toán cơ bản
 - Giải tích 1
@@ -69,9 +72,9 @@
 - Theme Powerpoint UTH.
 - Hướng dẫn chi tiết trình bày luận văn...
 ***
-## Các trang web học tập cần sử dụng của Trường:
+## Các trang web học tập chính cần sử dụng của Trường:
 - [https://daotao.ut.edu.vn/](https://daotao.ut.edu.vn/) - Xem thông báo của Phòng Đào tạo (Đăng ký học phần, tạm hoãn nghĩa vụ...).
 - [https://portal.ut.edu.vn/](https://portal.ut.edu.vn/) - Xem thời khóa biểu, thông tin cá nhân (bao gồm điểm số), đăng ký học phần, công nợ học phí, chương trình khung...
 - [https://courses.ut.edu.vn/](https://courses.ut.edu.vn/) - Nơi các Thầy/Cô upload tài liệu học tập cho từng môn, bài tập, nộp bài tập, thi giữa kỳ, cuối kỳ, quét trùng lặp...
-- [https://it3e.ut.edu.vn/](https://it3e.ut.edu.vn/) - Trang của Viện Công nghệ thông tin, Điện và Điện tử (trước kia là Khoa Công nghệ thông tin), thông tin về khoa, học kỳ doanh nghiệp, thông báo thực tập của các công ty...)
+- [https://it3e.ut.edu.vn/](https://it3e.ut.edu.vn/) - Trang của Viện Công nghệ thông tin, Điện và Điện tử (trước kia là Khoa Công nghệ thông tin), thông tin về Viện, học kỳ doanh nghiệp, thông báo thực tập của các công ty...)
 - ***Và nhiều trang web, hội nhóm khác***
