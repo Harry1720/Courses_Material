@@ -1,10 +1,10 @@
-# [Trường Đại học Giao thông vận tải TP.HCM - UTH](https://ut.edu.vn/)
+<!-- # [Trường Đại học Giao thông vận tải TP.HCM - UTH](https://ut.edu.vn/) -->
+
+Tài liệu học tập các môn của ngành Công nghệ thông tin, chuyên ngành Công nghệ thông tin **(Khóa 22)**, [Trường Đại học Giao thông vận tải TP.HCM](https://ut.edu.vn/).
 
 <p align="center">
-    <img src="logo_uth.png" width="75%" alt="logo_uth">
+    <img src="logo_uth.png" width="55%" alt="logo_uth">
 </p>
-
-Tài liệu học tập các môn của ngành Công nghệ thông tin, chuyên ngành Công nghệ thông tin (Khóa 22) _(Đang update...)_
 
 :no_entry: **_Bộ tài liệu chỉ mang tính chất tham khảo, nghiên cứu thêm và không được dùng thay thế cho các bài nộp cho môn học_** :no_entry:
 
@@ -14,18 +14,20 @@ Tài liệu học tập các môn của ngành Công nghệ thông tin, chuyên 
 
 Tác giả chỉ mong muốn tổng hợp các tài nguyên, kiến thức cần thiết cho các môn học tại Trường, giúp các bạn Sinh viên tìm kiếm nhanh chóng & học tập hiệu quả hơn, **không nhằm mục đích sao chép, trích dẫn.... để kinh doanh hay lấy làm bản quyền riêng.**
 
-:triangular_flag_on_post:**Một số nội dung có thể chưa cập nhật/đầy đủ do tính chất thay đổi liên tục của ngành Công nghệ thông tin & chủ trương của Trường, hoặc do chủ bộ tài liệu đang tham gia học tập bộ môn đó**:triangular_flag_on_post:
+:triangular_flag_on_post:**Một số nội dung có thể lỗi thời/không đầy đủ do tính chất thay đổi liên tục của ngành Công nghệ thông tin, chủ trương của Trường...**:triangular_flag_on_post:
 
-**Lưu ý:** Nếu bạn muốn sử dụng các tài liệu trong bộ này, khuyến khích bạn `git clone` repository này về, mỗi lần tác giả cập nhật, bạn chỉ cần dùng các lệnh cập nhật local của bạn.
+**Lưu ý:** Nếu bạn muốn sử dụng các tài liệu trong bộ này, khuyến khích bạn `git clone` repository này về, mỗi lần tác giả cập nhật, bạn chỉ cần dùng các lệnh cập nhật local của bạn (`git pull`).
 
-:star:**Cảm ơn bạn đã ghé thăm. Chúc các bạn sử dụng hiệu quả bộ tài liệu, học tập tốt và đạt được nguyện vọng của bản thân**:star:
+Nếu bạn có thắc mắc hay muốn liên hệ với mình, vui lòng gửi email qua [đây](baohuynh4107@gmail.com).
 
-## 1. Các môn về Công nghệ thông tin.
+:star:**Cảm ơn đã ghé thăm. Chúc các bạn sử dụng hiệu quả bộ tài liệu, học tập tốt và đạt được nguyện vọng của bản thân**:star:
+
+## 1. Các môn về Công nghệ thông tin
 
 - An toàn thông tin
-- Cấu trúc dữ liệu và giải thuật
-- Cấu trúc rời rạc
-- Chuyên đề hệ thống giao thông thông minh
+- Cấu trúc dữ liệu và giải thuật - DSA
+- Cấu trúc rời rạc *(Gồm Toán rời rạc và Lý thuyết đồ thị)*
+- Chuyên đề Hệ thống giao thông thông minh
 - Chuyên đề thực tế 1
 - Cơ sở dữ liệu
 - Công nghệ phần mềm
@@ -51,7 +53,7 @@ Tác giả chỉ mong muốn tổng hợp các tài nguyên, kiến thức cần
 - Xây dựng hệ thống thông tin quản lý (C#)
 - Xử lý ảnh & thị giác máy tính
 
-## 2. Các môn về chính trị, pháp luật.
+## 2. Các môn về chính trị, pháp luật
 
 - Pháp luật đại cương
 - Triết học Mác – Lênin
@@ -80,13 +82,16 @@ Tác giả chỉ mong muốn tổng hợp các tài nguyên, kiến thức cần
 
 ## Ngoài ra còn có các file như sau:
 
-- Hướng dẫn trình bày bài tập lớn (gồm cách trình bày file báo cáo, căn chỉnh văn bản...).
-- Theme Powerpoint UTH.
-- Hướng dẫn chi tiết trình bày luận văn...
+- Hướng dẫn trình bày bài tập lớn (gồm cách trình bày file báo cáo, căn chỉnh văn bản...)
+- Hướng dẫn chi tiết trình bày luận văn
+- Hướng dẫn viết đặc tả yêu cầu dự án
+- Theme Powerpoint UTH
+- File Tiểu luận mẫu đã cấu hình
 
-## Các trang web học tập chính cần sử dụng của Trường:
+## Các trang web thường sử dụng của Trường:
 
-- [https://portal.ut.edu.vn/](https://portal.ut.edu.vn/) - Xem thời khóa biểu, thông tin cá nhân (bao gồm điểm số), đăng ký học phần, công nợ học phí, chương trình khung...
-- [https://daotao.ut.edu.vn/](https://daotao.ut.edu.vn/) - Xem thông báo của Phòng Đào tạo (Đăng ký học phần, tạm hoãn nghĩa vụ...).
+- [https://portal.ut.edu.vn/](https://portal.ut.edu.vn/) - Xem thời khóa biểu, thông tin cá nhân (bao gồm điểm số), đăng ký học phần/tốt nghiệp/nhận giấy tờ, công nợ học phí, chương trình khung...
 - [https://courses.ut.edu.vn/](https://courses.ut.edu.vn/) - Nơi các Thầy/Cô upload tài liệu học tập cho từng môn, bài tập, nộp bài tập, thi giữa kỳ, cuối kỳ, quét trùng lặp...
-- **_Và nhiều trang web khác_**
+- [https://daotao.ut.edu.vn/](https://daotao.ut.edu.vn/) - Xem thông báo của Phòng Đào tạo (Đăng ký học phần, học bổng...).
+
+**_Cùng các trang web khác._**
